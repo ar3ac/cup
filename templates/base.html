@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.U.P. - Unit Converter</title>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        form { margin-bottom: 2rem; padding: 1rem; border: 1px solid #ccc; border-radius: 5px; }
+        input, select { margin-bottom: 10px; }
+        nav { background-color: #f0f0f0; padding: 1rem; margin-bottom: 2rem; border-radius: 5px; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; font-weight: bold; }
+        nav a:hover { text-decoration: underline; color: #007bff; }
+    </style>
+</head>
+<body>
+    <h1>C.U.P. - Converter Utility Program</h1>
+    <nav>
+        <a href="/length">Length</a>
+        <a href="/weight">Weight</a>
+        <a href="/temperature">Temperature</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

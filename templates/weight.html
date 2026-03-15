@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="post">
+    Enter the weight to convert: <br>
+    <input type="number" step="any" name="value" required> <br>
+
+    Unit to convert from: <br>
+        <select name="from_unit">
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+            <option value="lb">lb</option>
+            <option value="oz">oz</option>
+        </select> <br>
+
+    Unit to convert to: <br>
+        <select name="to_unit">
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="mg">mg</option>
+            <option value="lb">lb</option>
+            <option value="oz">oz</option>
+        </select> <br>
+
+    <input type="submit" value="Convert">
+</form>
+
+{% if result is defined %}
+    <h3>Result: {{ result }}</h3>
+{% endif %}
+
+{% if error %}
+    <p style="color: red;">Error: {{ error }}</p>
+{% endif %}
+{% endblock %}
